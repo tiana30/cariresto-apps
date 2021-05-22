@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARIRESTO APPS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@300;400&display=swap" rel="stylesheet"> 
+</head> 
+<body>
+<header class="header">
+    <div class="logo_inner">
+        <h1 class="logo_title">
+            CARIRESTO
+        </h1>
+    </div>
+
+    <nav id="drawer" class="nav">
+        <ul class="nav_list">
+            <li id="home" class="nav_item"><a href="#">Beranda</a></li>
+            <li id="favorite" class="nav_item"><a href="#">Favorit</a></li>
+            <li class="nav_item"><a href="#">Tentang </a></li>
+        </ul>
+    </nav> 
+
+    <div id="menu" class="nav_icon"> <a> ☰ </a></div>
+
+</header>
+<div class="jumbotron jumbotron_shadow">
+    <div class="jumbotron_inner">
+    </div>
+</div>
+<main>
+    <section class="content">
+        <h1 class="resto_title">Daftar Restoran </h1>
+        <div id="resto_list">
+            <div class="resto-item">
+                <img class=resto_img"
+                            src= "/images/24.jpg"
+                            alt= ${restaurant.name}>
+                <ul class="resto_content">
+                <li><p class="resto_text">
+                <span class="resto_text"> #${restaurant.city} - </span>
+                ${restaurant.name}</p></li>
+                
+                <li><p class="resto_rating">${restaurant.rating}</p></li>
+                <li><a> kunjungi </a></li>
+                </ul>
+            </div>
+
+            <div class="resto-item">
+                <img class=resto_img"
+                            src= "/images/24.jpg"
+                            alt= ${restaurant.name}>
+                <ul class="resto_content">
+                <li><p class="resto_text">
+                <span class="resto_text"> #${restaurant.city} - </span>
+                ${restaurant.name}</p></li>
+                
+                <li><p class="resto_rating">${restaurant.rating}</p></li>
+                <li><a> kunjungi </a></li>
+                </ul>
+            </div>
+
+            <div class="resto-item">
+                <img class=resto_img"
+                            src= "/images/24.jpg"
+                            alt= ${restaurant.name}>
+                <ul class="resto_content">
+                <li class="resto_text">
+                <span class="resto_text"> #${restaurant.city} - </span>
+                ${restaurant.name}</li>
+                
+                <li class="resto_rating">${restaurant.rating}</li>
+                <li><a> kunjungi </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <p> Copyright © 2020 - CARIRESTO </p>
+</footer>
+</body>
+</html>
