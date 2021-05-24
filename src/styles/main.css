@@ -13,23 +13,17 @@ body, html {
 
 body {
     font-family: "Rowdies", "Roboto" ,sans-serif;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 header{
     min-height: 56px;
     transition: min-height 0.3s;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     justify-items: end;
     color: #FF6535;
-    margin: 0 0.7em;
-}
-
-.header div{
-    border: 2px dashed orange;
-    
-    
+    padding: 1em 3em;
 }
 
 .logo_inner {
@@ -39,48 +33,49 @@ header{
 }
 
 .logo_title {
-    font-size: 2em;
-    margin: 0.3em 0.3em;
+    font-size: 3em;
+    margin: auto;
     display: inline-block;
 }
 
 .nav {
     width: 100%;
-    margin: 0.3em 0.3em;
-    font-size: 1em;
+    margin: 0 auto;
 }
-.nav div{
-    border: 2px dashed orange;
-}
+
 .nav_list {
     width: 100%;
-    padding: 0;
-    margin: 0;
-    font-size: 1em;
+    padding: 0;;
+    font-size: 2em;
 }
 
 .nav_item {
     box-sizing: border-box;
     display: inline-block;
-    padding: 10px;
+    width: auto;
     align-items: center;
     text-transform: uppercase;
 }
 
 .nav a {
+    display: inline-block;
+    padding: 10px;
     text-decoration: none;
     text-align: right;
     color: #FF6535;
 }
 
 .nav a:hover {
-    text-decoration: underline;
-    color: #000;
+    text-decoration:none;
+    background: #29558c;
+    color: #ffffff;
+    border-radius: 0.5em;
 }
 
-.nav_icon {
+.menu{
+    font-size: 32px;
     visibility: visible;
-    margin: 0.3em 0.3em;
+    margin: 0.5em 0.5em;
     display: block;
     width: 30px;
     cursor: pointer;
@@ -89,34 +84,40 @@ header{
 .jumbotron{
     display: flex;
     align-items: center;
-    min-height: 360px;
+    min-height: 380px;
     width: 100%;
-    text-align: center;
-    background: url("/images/heros/hero-image_2.jpg") no-repeat ;
-    background-size: cover;
+    background: #FF6535;
+    background: linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
+    object-fit: cover;
+    background-position: center;
 }
 
 .jumbotron_inner {
     margin: 0 auto;
     max-width: 800px;
-    
+    padding: 1.5em; 
+    text-align: center;
    }
 
 .jumbotron_title {
-    font-size: 1.5em;
-    color: #fff;       
+    font-size: 28px;
+    color: #FF6535;
+    text-align: center;
        
 }
 
 .jumbotron_tagline {
-    box-sizing: border-box;
-    background: whitesmoke;
-    border-radius: 4px;
-    font-size: 1.5em;   
-    color: #FF6535;  
-    margin-top: 16px;
+    font-size: 26px;   
+    color:#29558c; 
+    
 }
 
+.jumbotron_box{
+    background: #FF6535;
+    border-radius: 0.2em;
+    color: #ffffff;
+    padding: 0.1em 0.1em;
+}
 /*
  * main
  */
@@ -124,69 +125,94 @@ header{
 main {
     width: 100%;
     margin: 0 auto;
-    padding: 0 2em;
-}
 
-main div {
-    border: 2px solid blue;
-    padding: 16px;
-    
 }
 
 .content{
-    width: 100%;
-    margin: 0.2em 0.2em;
-    height: 800px;
+    padding: 1em 3em;
 }
 
-
-.resto_title {
-    font-size: 1em;
+.content_title {
+    font-size: 2.5em;
+    font-weight: 200;
+    color:#29558c;
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 
-.resto_list{
-    width:100%;
-    margin:0 auto;
+#card_list{
     display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-column-gap: 1em; 
 }
 
-.resto_list div{
-    border: 2px dashed blueviolet;
-    justify-content: center;
-}
-
-.resto_item{
+.card_item{
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-
-}
-.resto-img{
-    min-height: 60px;
-    width: 10%;
-    vertical-align: middle;
-    border-radius: 4px;
-    justify-items: left;
-}
-
-.resto_content {
-    justify-items: right;
-    color: #FF6535;
-}
-
-.resto_text{ 
-    margin-top: 16px;  
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    max-height: 600px;
+    border-radius: 1em;
     
 }
 
-.footer{
-    position: relative;
+.card_img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card_rating {
+    position: absolute;
+    top: 0;
     left: 0;
+    font-size: 18px;
+    color: white;
+    background-color: #29558c;
+    padding: 0.3em 1em;
+    border-bottom-right-radius: 0.5em;
+    z-index : 1;
+}
+
+.card_rating .fas {
+    padding: 0.1em 0.1em 0.1em 0;
+    color: gold;
+}
+
+  .card_detail {
+    position: absolute;
     bottom: 0;
+    left: 0;
+    font-size: 1.5em;
+    font-weight: 200;
+    color: #ffffff;
+    width: 100%;
+    background-color: #FF6535;
+    padding: 0.5em 1em;
+}
+
+.card_detail li{
+    list-style-type: none;
+    
+}
+
+.card_city{
+    font-weight: 400;
+}
+.card_city .fas {
+    padding: 0.1em 0.1em 0.1em 0;
+    color: #29558c;
+}
+.card_name{
+    margin-left: 1em;
+}
+
+.footer{
     margin: 0.3em auto;
     display: inline-block;
+    padding: 0.3em;
     width: 100%;
     font-size: 1em;
     text-align: center;
-    color: #FF6535;
+    color: #ffffff;
 }

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARIRESTO APPS</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@200;300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head> 
 <body>
 <header class="header">
@@ -23,59 +23,62 @@
             <li class="nav_item"><a href="#">Tentang </a></li>
         </ul>
     </nav> 
+</header> 
 
-    <div id="menu" class="nav_icon"> <a> ☰ </a></div>
-
-</header>
 <div class="jumbotron jumbotron_shadow">
     <div class="jumbotron_inner">
+        <p class="jumbotron_title">
+          Mau buat <span class="jumbotron_box">acara spesial</span> bareng temen kamu?</p> 
+          <p class="jumbotron_title">Atau mau tahu <span class="jumbotron_box">resto keren</span> se-Indonesia?<p>
+        <p class="jumbotron_tagline">Cek dulu disini, sebelum<span class="jumbotron_box">ngumpul</span> kemudian.</p>
     </div>
 </div>
+
 <main>
     <section class="content">
-        <h1 class="resto_title">Daftar Restoran </h1>
-        <div id="resto_list">
-            <div class="resto-item">
-                <img class=resto_img"
-                            src= "/images/24.jpg"
-                            alt= ${restaurant.name}>
-                <ul class="resto_content">
-                <li><p class="resto_text">
-                <span class="resto_text"> #${restaurant.city} - </span>
-                ${restaurant.name}</p></li>
-                
-                <li><p class="resto_rating">${restaurant.rating}</p></li>
-                <li><a> kunjungi </a></li>
+        <p class="content_title">Temukan Restoran yang kamu suka</p>
+        <div id="card_list">
+
+            <div class="card_item">
+               <img class="card_img" src="/images/24.jpg" alt="foto"/>
+               <span class="card_rating">
+                  <i class="fas fa-star">  </i> 4.5
+               </span>
+               <ul class="card_detail">
+                <li class="card_city"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+                Surabaya 
+                </li>
+                <li class="card_name">Bring Your Phone Cafe</li>
                 </ul>
             </div>
 
-            <div class="resto-item">
-                <img class=resto_img"
-                            src= "/images/24.jpg"
-                            alt= ${restaurant.name}>
-                <ul class="resto_content">
-                <li><p class="resto_text">
-                <span class="resto_text"> #${restaurant.city} - </span>
-                ${restaurant.name}</p></li>
-                
-                <li><p class="resto_rating">${restaurant.rating}</p></li>
-                <li><a> kunjungi </a></li>
-                </ul>
-            </div>
+            <div class="card_item">
+                <img class="card_img" src="/images/24.jpg" alt="foto"/>
+                <span class="card_rating">
+                   <i class="fas fa-star">  </i> 4.5
+                </span>
+                <ul class="card_detail">
+                <li class="card_city"><i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Surabaya 
+                </li>
+                 <li class="card_name">Bring Your Phone Cafe</li>
+                 </ul>
+             </div>
 
-            <div class="resto-item">
-                <img class=resto_img"
-                            src= "/images/24.jpg"
-                            alt= ${restaurant.name}>
-                <ul class="resto_content">
-                <li class="resto_text">
-                <span class="resto_text"> #${restaurant.city} - </span>
-                ${restaurant.name}</li>
-                
-                <li class="resto_rating">${restaurant.rating}</li>
-                <li><a> kunjungi </a></li>
-                </ul>
-            </div>
+             <div class="card_item">
+                <img class="card_img" src="/images/24.jpg" alt="foto"/>
+                <span class="card_rating">
+                   <i class="fas fa-star"></i> 4.5 
+                </span>
+                <ul class="card_detail">  
+                 <li class="card_city">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    Surabaya
+                </li>
+                 <li class="card_name">Bring Your Phone Cafe</li>
+                 </ul>
+             </div>
+
         </div>
     </section>
 </main>
