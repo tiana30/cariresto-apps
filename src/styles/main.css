@@ -13,53 +13,67 @@ body, html {
 
 body {
     font-family: "Rowdies", "Roboto" ,sans-serif;
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 300;
+    color:#FF6535;
 }
 
-header{
-    min-height: 56px;
-    transition: min-height 0.3s;
-    display: grid;
+/*
+ * Header
+ *
+ */
+
+.header{
+    display: flex;
     grid-template-columns: 1fr 2fr;
-    justify-items: end;
-    color: #FF6535;
-    padding: 1em 3em;
+    align-items: center;
+    padding: 0.5em 2em;
 }
 
 .logo_inner {
-    width: 100%;
+   width: 100%;
+   flex: 1;
     margin-left: auto;
     margin-right: auto;
 }
 
 .logo_title {
-    font-size: 3em;
+    font-size: 2em;
     margin: auto;
     display: inline-block;
+    font-weight: 400;
 }
+
+/*
+ * Top level navigation
+ */
 
 .nav {
     width: 100%;
     margin: 0 auto;
+    flex:2;
+    text-align: right;
 }
 
 .nav_list {
     width: 100%;
-    padding: 0;;
-    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+    
 }
 
 .nav_item {
     box-sizing: border-box;
     display: inline-block;
     width: auto;
-    align-items: center;
-    text-transform: uppercase;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 .nav a {
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     text-align: right;
     color: #FF6535;
@@ -69,7 +83,7 @@ header{
     text-decoration:none;
     background: #29558c;
     color: #ffffff;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
 }
 
 .menu{
@@ -81,43 +95,50 @@ header{
     cursor: pointer;
 }
 
+/*
+ * Jumbotron
+ */
+
 .jumbotron{
     display: flex;
     align-items: center;
+    text-align: center;
     min-height: 380px;
     width: 100%;
+    box-shadow: 0 4px 8px 0 #29558c90;
     background: #FF6535;
     background: linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
+    background: -moz-linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
+    background: -webkit-linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
+    background: -o-linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
     object-fit: cover;
     background-position: center;
 }
 
 .jumbotron_inner {
-    margin: 0 auto;
+    margin: 1em auto;
     max-width: 800px;
-    padding: 1.5em; 
-    text-align: center;
    }
 
 .jumbotron_title {
-    font-size: 28px;
-    color: #FF6535;
-    text-align: center;
-       
+    font-size: 1.5em;
+    text-align: center;    
 }
 
 .jumbotron_tagline {
-    font-size: 26px;   
+    font-size: 1.5em;
     color:#29558c; 
     
 }
 
 .jumbotron_box{
     background: #FF6535;
-    border-radius: 0.2em;
+    padding: 0.1em 0.2em;
+    border-radius: 0.3em;
     color: #ffffff;
-    padding: 0.1em 0.1em;
+    text-transform: capitalize;
 }
+
 /*
  * main
  */
@@ -125,52 +146,84 @@ header{
 main {
     width: 100%;
     margin: 0 auto;
-
 }
 
+/*
+ * content
+ */
+
 .content{
-    padding: 1em 3em;
+    padding: 1em 2em;
 }
 
 .content_title {
-    font-size: 2.5em;
-    font-weight: 200;
+    font-size: 1.5em;
     color:#29558c;
     text-align: center;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
 }
 
+/*
+ * loading spinner
+ */
+
+.loading{
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 0.3em; 
+    text-align: center;
+}
+
+.loading .fas{
+    color: #FF6535;
+    align-items: center;
+}
+
+/*
+ * card_list
+ */
+
 #card_list{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-column-gap: 1em; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto; 
+    gap: 3em 2em;  
+    grid-gap: 3em 2em;  
+    font-size: 16px;
 }
 
 .card_item{
+    box-shadow: 0 4px 8px 0 #29558c90;
     width: 100%;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s ease;
-    max-height: 600px;
-    border-radius: 1em;
+    border-radius: 0.5em;
     
 }
 
-.card_img{
-    object-fit: cover;
-    height: 100%;
+.card_header{
     width: 100%;
+    display: flex;
+    position: relative;
+    min-height: 300px;
+    font-weight: 300;
+    box-shadow: #29558c;  
+}
+
+.card_img{
+    width: 100%;
+    flex:1;
+    border-radius: 0.5em;
 }
 
 .card_rating {
+    flex:1;
     position: absolute;
-    top: 0;
+    top: 1;
     left: 0;
-    font-size: 18px;
     color: white;
     background-color: #29558c;
     padding: 0.3em 1em;
-    border-bottom-right-radius: 0.5em;
+    border-radius: 0.5em 0 0.5em 0;
     z-index : 1;
 }
 
@@ -179,40 +232,49 @@ main {
     color: gold;
 }
 
-  .card_detail {
+.card_title {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 1.5em;
-    font-weight: 200;
-    color: #ffffff;
     width: 100%;
     background-color: #FF6535;
+    display: flex;
     padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: 400; 
+    color: #ffffff;
 }
 
-.card_detail li{
-    list-style-type: none;
-    
+.card_name{
+    flex: 2;
 }
 
 .card_city{
-    font-weight: 400;
-}
-.card_city .fas {
-    padding: 0.1em 0.1em 0.1em 0;
-    color: #29558c;
-}
-.card_name{
-    margin-left: 1em;
+    flex:1;
+    text-align: center;
 }
 
+.card_city .fas {
+    padding-right: 5px;
+    color: #29558c;
+}
+
+.card_content {
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.card_desc{ 
+    margin: 1em;
+    text-align: justify;
+}
+
+
 .footer{
-    margin: 0.3em auto;
+    margin: 1em auto;
     display: inline-block;
     padding: 0.3em;
     width: 100%;
     font-size: 1em;
     text-align: center;
-    color: #ffffff;
 }
