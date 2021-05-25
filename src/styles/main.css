@@ -27,7 +27,7 @@ body {
     display: flex;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    padding: 0.5em 2em;
+    padding: 0.5em 1em;
 }
 
 .logo_inner {
@@ -73,7 +73,7 @@ body {
 
 .nav a {
     display: inline-block;
-    padding: 5px;
+    padding: 0.7em;
     text-decoration: none;
     text-align: right;
     color: #FF6535;
@@ -153,11 +153,12 @@ main {
  */
 
 .content{
-    padding: 1em 2em;
+    padding: 1em;
 }
 
 .content_title {
-    font-size: 1.5em;
+    font-size: 1em;
+    line-height: 1.5em;
     color:#29558c;
     text-align: center;
     padding-bottom: 1em;
@@ -272,8 +273,6 @@ main {
 
 .footer{
     margin: 1em auto;
-    display: inline-block;
-    padding: 0.3em;
     width: 100%;
     font-size: 1em;
     text-align: center;
