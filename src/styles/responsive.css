@@ -1,0 +1,45 @@
+#card_list {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 499px) {
+    .nav {
+        z-index: 10;
+        background-color: #fff;
+        width: 50%;
+        top: 0;
+        right: 0;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-400px, 0);
+        transform: translate(0, -400px);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav_item {
+        display: list-item;
+        list-style-type: none;
+        border-bottom: 1px solid #E0E0E0;
+        width: auto;
+        text-align: left;
+    }
+
+    .nav_menu{
+        visibility: visible;
+    }
+
+    @media screen and (min-width: 599px) {
+        nav_menu{
+            display: none;
+        }
+    }
+}

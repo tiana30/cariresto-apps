@@ -30,11 +30,12 @@ body {
     padding: 0.5em 1em;
 }
 
-.logo_inner {
+.logo {
    width: 100%;
    flex: 1;
-    margin-left: auto;
-    margin-right: auto;
+   margin-left: auto;
+   margin-right: auto;
+   cursor: pointer;
 }
 
 .logo_title {
@@ -44,6 +45,20 @@ body {
     font-weight: 400;
 }
 
+.logo a{
+    display: inline-block;
+    text-decoration: none;
+    text-align: right;
+    color: #FF6535;
+}
+
+.logo a:hover {
+    text-decoration:none;
+    background: #FF6535;
+    color: #ffffff;
+    border-radius: 0.3em;
+}
+
 /*
  * Top level navigation
  */
@@ -51,7 +66,7 @@ body {
 .nav {
     width: 100%;
     margin: 0 auto;
-    flex:2;
+    flex:1;
     text-align: right;
 }
 
@@ -66,14 +81,14 @@ body {
 .nav_item {
     box-sizing: border-box;
     display: inline-block;
-    width: auto;
+    width: 18%;
     text-align: center;
     text-transform: capitalize;
 }
 
 .nav a {
     display: inline-block;
-    padding: 0.7em;
+    padding: 12px;
     text-decoration: none;
     text-align: right;
     color: #FF6535;
@@ -81,19 +96,30 @@ body {
 
 .nav a:hover {
     text-decoration:none;
-    background: #29558c;
+    background: #FF6535;
     color: #ffffff;
     border-radius: 0.3em;
 }
 
-.menu{
-    font-size: 32px;
-    visibility: visible;
-    margin: 0.5em 0.5em;
-    display: block;
-    width: 30px;
+.nav_menu{
+    visibility: hidden;
     cursor: pointer;
+    border: none;
+    background: transparent;
 }
+
+.nav_menu .fas {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 0.5em;
+    color: #FF6535;
+}
+
+.nav_menu .fas:hover{
+    background: #FF6535;;
+    color: #ffffff;
+}
+
 
 /*
  * Jumbotron

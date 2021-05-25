@@ -1,8 +1,9 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
+import '../styles/responsive.css';
 import data from '../data/DATA.json';
 
-const getData = async () => {
+const getData = () => {
     try {
         const listResto = document.querySelector("#card_list");
         const loadingSpin = document.querySelector(".loading");
@@ -42,8 +43,35 @@ const getData = async () => {
     }
 };
 
+const Showdrawer = () => {
+    const menu = document.querySelector('#menu');
+    const hero = document.querySelector('.jumbotron');
+    const logo = document.querySelector('.logo');
+    const main = document.querySelector('main');
+    const drawer = document.querySelector('#drawer');
+
+menu.addEventListener('click', function (event) {
+    drawer.classList.toggle('open');
+    event.stopPropagation();
+});
+
+logo.addEventListener('click', function () {
+    drawer.classList.remove('open');
+});
+
+hero.addEventListener('click', function () {
+    drawer.classList.remove('open');
+});
+
+main.addEventListener('click', function () {
+    drawer.classList.remove('open');
+});
+
+
+}
+
 setTimeout(() => {
     getData();
 }, 3000);
 
-
+Showdrawer();
