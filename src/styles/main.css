@@ -19,6 +19,36 @@ body {
 }
 
 /*
+ * Focus Style
+ *
+ */
+
+h1[tabindex="0"]:focus {
+    outline: 3px dashed black;
+} 
+
+button[tabindex="0"]:focus {
+    outline: 3px dashed black;
+}
+
+a[tabindex="0"]:focus {
+    outline: 3px dashed black;
+}
+
+li a:focus{
+    outline: 3px dashed black;
+}
+
+p[tabindex="0"]:focus {
+    outline: 3px dashed black;
+}
+
+img[tabindex="0"]:focus {
+    outline: 3px dashed black;
+ }
+
+
+/*
  * Header
  *
  */
