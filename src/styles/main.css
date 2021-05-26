@@ -48,6 +48,25 @@ img[tabindex="0"]:focus {
  }
 
 
+ /*
+ * Skip Link Style
+ *
+ */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #29558c;;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+  
+.skip-link:focus {
+    top: 0;
+}
+
 /*
  * Header
  *
