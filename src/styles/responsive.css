@@ -174,11 +174,6 @@
 }
 
 @media screen and (min-width: 1100px) {
-    .jumbotron_inner {
-        margin: 1em auto;
-        max-width: 940px;
-    }
-
     #card_list{
     grid-template-columns: repeat(3, 1fr);
     }
@@ -190,7 +185,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    main {
+       main {
         max-width: 1200px;
     }
 
@@ -202,4 +197,5 @@
         font-size: 18px;
     }
 }
+
     
