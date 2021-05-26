@@ -13,14 +13,14 @@ const getData = () => {
             listResto.innerHTML += ` 
             <div class="card_item" key=${card.id}>
                 <div class="card_header">
-                    <img class="card_img" loading=”lazy” src=${card.pictureId} alt="foto ${card.name}"/>
+                    <img tabindex="0" class="card_img" loading=”lazy” src=${card.pictureId} alt="foto ${card.name}"/>
                     <div class="card_rating">
-                        <i class="fas fa-star">  </i> ${card.rating} / 5 
+                       <p tabindex="0"> <i class="fas fa-star">  </i> ${card.rating} / 5 </p>
                     </div>
 
                     <div class="card_title">
-                        <p class="card_name">${card.name}</p>
-                        <p class="card_city">
+                        <p tabindex="0" class="card_name">${card.name}</p>
+                        <p tabindex="0" class="card_city">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
                         ${card.city}
                         </p> 
@@ -29,7 +29,7 @@ const getData = () => {
                 </div>
 
                 <div class="card_content">
-                    <p class="card_desc"> ${card.description.substring(0, 200) +" ...."}</p>
+                    <p tabindex="0" class="card_desc"> ${card.description.substring(0, 200) +" ...."}</p>
                 </div>
 
             </div>
