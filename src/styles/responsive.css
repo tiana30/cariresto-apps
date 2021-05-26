@@ -1,9 +1,9 @@
 #card_list {
     display: grid;
-    grid-row-gap: 16px;
+
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width:590px) {
     .nav {
         z-index: 10;
         background-color: #fff;
@@ -37,9 +37,169 @@
         visibility: visible;
     }
 
-    @media screen and (min-width: 599px) {
-        nav_menu{
-            display: none;
-        }
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 280px;
+    }
+    .content_title{
+        font-size: 20px;
+    }
+
+    #card_list{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2em;
+    }
+
+} 
+
+@media screen and (min-width: 360px) {
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 320px;
+    }
+    .content_title{
+        font-size: 20px;
+    }
+
+    #card_list{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2em;
+    }
+
+}
+
+@media screen and (min-width:591px){
+    .nav{       
+        background-color: #fff;
+        width: 100%;
+    }
+
+    .nav_list {
+        display: flex;
+        display: 100%;
+    }
+
+    .nav_item{
+        width: auto;
+    }
+
+    .nav_menu{
+        display: none;
+    }
+
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 530px;
+    }
+
+    .content_title{
+        font-size: 24px;
+    }
+
+    #card_list{
+    grid-template-columns: 1fr;
+    }
+    
+    .card_img{
+        width: 100%;
+        min-height:200px;
     }
 }
+
+@media screen and (min-width: 700px) {
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 640px;
+    }
+
+    #card_list{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .card_img{
+        width: 100%;
+        min-height:200px;
+    }
+
+    .card_title {
+        font-size: 16px;
+    }
+    .card_desc{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 740px;
+    }
+
+    .content_title{
+        font-size: 24px;
+    }
+
+    #card_list{
+    grid-template-columns: 1fr 1fr;
+    }
+    
+    .card_img{
+        width: 100%;
+        min-height:250px;
+    }
+
+    .card_title {
+        font-size: 16px;
+    }
+    .card_desc{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+    .card_img{
+        width: 100%;
+        min-height:350px;
+    }
+    
+    .card_title {
+        font-size: 18px;
+    }
+
+    .card_desc{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .jumbotron_inner {
+        margin: 1em auto;
+        max-width: 940px;
+    }
+
+    #card_list{
+    grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .card_item{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+    }
+
+    .card_title {
+        font-size: 18px;
+    }
+    .card_desc{
+        padding: 18px;
+        font-size: 18px;
+    }
+}
+    

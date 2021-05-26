@@ -12,7 +12,7 @@ body, html {
 }
 
 body {
-    font-family: "Rowdies", "Roboto" ,sans-serif;
+    font-family: "Rowdies" ,sans-serif;
     font-size: 16px;
     font-weight: 300;
     color:#FF6535;
@@ -25,21 +25,20 @@ body {
 
 .header{
     display: flex;
-    grid-template-columns: 1fr 2fr;
     align-items: center;
+    text-align: left;
     padding: 0.5em 1em;
 }
 
 .logo {
    width: 100%;
-   flex: 1;
    margin-left: auto;
    margin-right: auto;
    cursor: pointer;
 }
 
 .logo_title {
-    font-size: 2em;
+    font-size: 32px;
     margin: auto;
     display: inline-block;
     font-weight: 400;
@@ -47,6 +46,7 @@ body {
 
 .logo a{
     display: inline-block;
+    padding: 12px;
     text-decoration: none;
     text-align: right;
     color: #FF6535;
@@ -66,7 +66,6 @@ body {
 .nav {
     width: 100%;
     margin: 0 auto;
-    flex:1;
     text-align: right;
 }
 
@@ -74,7 +73,7 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 24px;
     
 }
 
@@ -102,7 +101,6 @@ body {
 }
 
 .nav_menu{
-    visibility: hidden;
     cursor: pointer;
     border: none;
     background: transparent;
@@ -132,7 +130,7 @@ body {
     min-height: 380px;
     width: 100%;
     box-shadow: 0 4px 8px 0 #29558c90;
-    background: #FF6535;
+    background: #ffffff90;
     background: linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
     background: -moz-linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
     background: -webkit-linear-gradient(to top, #29558c90 0%, rgb(255, 255, 255, 0.9) 30% ,rgb(255, 255, 255, 0.9) 70%, #FF653590 100%),  url("/images/heros/hero-image_2.jpg") no-repeat;
@@ -142,27 +140,17 @@ body {
 }
 
 .jumbotron_inner {
-    margin: 1em auto;
     max-width: 800px;
+    
    }
 
 .jumbotron_title {
-    font-size: 1.5em;
-    text-align: center;    
+    font-size: 26px;
 }
 
 .jumbotron_tagline {
-    font-size: 1.5em;
     color:#29558c; 
-    
-}
-
-.jumbotron_box{
-    background: #FF6535;
-    padding: 0.1em 0.2em;
-    border-radius: 0.3em;
-    color: #ffffff;
-    text-transform: capitalize;
+    font-size: 24px;
 }
 
 /*
@@ -183,8 +171,7 @@ main {
 }
 
 .content_title {
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 24px;
     color:#29558c;
     text-align: center;
     padding-bottom: 1em;
@@ -267,7 +254,7 @@ main {
     background-color: #FF6535;
     display: flex;
     padding: 0.5em 1em;
-    font-size: 1em;
+    font-size: 18px;
     font-weight: 400; 
     color: #ffffff;
 }
@@ -287,12 +274,12 @@ main {
 }
 
 .card_content {
-    font-size: 1em;
+    font-size: 18px;
     font-weight: 200;
 }
 
 .card_desc{ 
-    margin: 1em;
+    margin: 18px;
     text-align: justify;
 }
 
